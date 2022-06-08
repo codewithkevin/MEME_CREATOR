@@ -3,9 +3,9 @@ import React from "react";
 
 const Header = () => {
     return (
-        <header>
-            <h3>LOGO</h3>
-            <h4>MEME CREATOR</h4>
+        <header className="header">
+            <h3 className="header-title">LOGO</h3>
+            <h4 className="header-text">MEME CREATOR</h4>
         </header>
     )
 };
