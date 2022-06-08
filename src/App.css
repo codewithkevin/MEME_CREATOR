@@ -7,3 +7,12 @@
   padding: 20px;
 }
 
+.header-title {
+  font-size: 20px;
+  margin-right: auto;
+}
+
+.header-text {
+  font-size: 12px;
+  font-weight: 500px;
+}
