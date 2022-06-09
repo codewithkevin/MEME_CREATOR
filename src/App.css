@@ -44,3 +44,9 @@ main {
   background-color: #282c34;
   color: #fff;
 }
+
+.meme-image img{
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+}
