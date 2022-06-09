@@ -3,7 +3,7 @@ import React from 'react';
 
 const Meme = () => {
     return (
-        <section className="Meme">
+        <main className="Meme">
 
             <from className="form">
                 <input type="text" placeholder="Top text" className="form--input"/>
@@ -13,7 +13,7 @@ const Meme = () => {
                 </button>
             </from>
 
-        </section>
+        </main>
     )
 }
 

@@ -7,6 +7,10 @@
   padding: 10px;
 }
 
+main {
+  padding: 36px;
+}
+
 .header-title {
   font-size: 20px;
   margin-right: auto;
@@ -24,6 +28,14 @@
   gap: 17px;
 }
 
+.form--input {
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px;
+}
+
 .form--button{
   grid-column: 1 / -1;
+  border-radius: 5px;
+  cursor: pointer;
 }
