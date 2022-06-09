@@ -39,3 +39,8 @@ main {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.form--button:hover{
+  background-color: #282c34;
+  color: #fff;
+}
