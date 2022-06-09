@@ -6,9 +6,11 @@ const Meme = () => {
         <section className="Meme">
 
             <from className="form">
-                <input type="text" className=""/>
-                <input  type="text" className=""/>
-                <button>Find A meme Image</button>
+                <input type="text" className="form--input"/>
+                <input  type="text" className="form--input"/>
+                <button className="form--button">
+                    Find A meme Image
+                </button>
             </from>
 
         </section>
