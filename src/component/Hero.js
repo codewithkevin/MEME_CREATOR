@@ -1,10 +1,13 @@
 import React from 'react';
-
+import datas from '../memesData'
 
 const Meme = () => {
     
     function Say() {
-        alert('Hello, I got Clicked')
+        const memesArray = datas.data.memes;
+        const randomNumber = Math.floor(Math.random() * memesArray.length)
+        alert(randomNumber)
+        
     }
 
     return (
