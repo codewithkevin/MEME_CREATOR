@@ -4,7 +4,7 @@ import datas from '../memesData'
 
 const Meme = () => {
 
-    const [image, setImage] = React.useState(0);
+    const [memeImage, setImage] = React.useState('');
     
     
     function Say() {
@@ -28,7 +28,7 @@ const Meme = () => {
             </from>
 
             <div className="meme-image">
-                <img src={image} alt="meme" className="meme--image"/>
+                <img src={memeImage} alt="meme" className="meme--image"/>
             </div>
 
         </main>
