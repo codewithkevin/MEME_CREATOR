@@ -46,8 +46,6 @@ main {
 }
 
 .meme-image img{
-  margin-top: 50px;
-  width: 50%;
-  height: auto;
-  align-items: center;
+  
+  max-width: 100%;
 }
