@@ -4,12 +4,14 @@ import datas from '../memesData'
 
 const Meme = () => {
 
-    let url
+    const [image, setImage] = React.useState(0);
+    
     
     function Say() {
         const memesArray = datas.data.memes;
         const randomNumber = Math.floor(Math.random() * memesArray.length)
-        url = memesArray[randomNumber].url;
+        const url = memesArray[randomNumber].url;
+        setImage(url);
     }
 
     return (
@@ -26,7 +28,7 @@ const Meme = () => {
             </from>
 
             <div className="meme-image">
-                <img src={url} alt="meme" className="meme--image"/>
+                <img src={image} alt="meme" className="meme--image"/>
             </div>
 
         </main>
