@@ -39,7 +39,7 @@ const Meme = () => {
             </from>
 
             <div className="meme-image">
-                <img src={meme} alt="meme" className="meme--image"/>
+                <img src={meme.randomImage} alt="meme" className="meme--image"/>
             </div>
 
         </main>
