@@ -1,17 +1,28 @@
 import React from 'react';
-// import image from './images/japan.jpg';
+import image from './images/japan.jpg';
 import datas from '../memesData'
 
 const Meme = () => {
 
-    const [memeImage, setImage] = React.useState('');
+    const [meme, setMeme] = React.useState({
+        topText: "",
+        bottomText: "",
+        randomImage: image
+    });
+
+    const [allMemeImages, setAllMemeImages] = React.useState(datas);    
     
     
     function Say() {
-        const memesArray = datas.data.memes;
+        const memesArray = allMemeImages.data.memes;
         const randomNumber = Math.floor(Math.random() * memesArray.length)
         const url = memesArray[randomNumber].url;
-        setImage(url);
+        setMeme(prevSate => {
+            return {
+                ...prevSate,
+                randomImage: url
+            }
+        })
     }
 
     return (
@@ -28,7 +39,7 @@ const Meme = () => {
             </from>
 
             <div className="meme-image">
-                <img src={memeImage} alt="meme" className="meme--image"/>
+                <img src={meme} alt="meme" className="meme--image"/>
             </div>
 
         </main>
