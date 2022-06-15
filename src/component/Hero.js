@@ -25,6 +25,10 @@ const Meme = () => {
         })
     }
 
+    function handleChange(event) {
+        const { name, value } = event.target;
+    }
+
     return (
         <main>
 
@@ -34,12 +38,26 @@ const Meme = () => {
                type="text"
                 placeholder="Top Text"
                 className="form--input"
+                name="topText"
+                value={meme.topText}
+                // onChange={(e) => {
+                //     setMeme(prevState => {
+                //         return {
+                //             ...prevState,
+                //             topText: e.target.value
+                //         }
+                //     }
+                // )}
+                // }
+                onChange = {handleChange}
                 />
 
                 <input
                 type="text"
                 placeholder="Bottom Text"
                 className="form--input"
+                name="bottomText"
+                value={meme.bottomText}
                 />
 
                 <button onClick={Say} className="form--button">
