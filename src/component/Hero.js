@@ -26,20 +26,6 @@ const Meme = () => {
         })
     }
 
-    imageHandler = (e) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-            if(reader.readyState === 2) {
-                setMeme(prevState => {
-                    return {
-                        ...prevState,
-                        userfile: reader.result
-                    }
-                })
-            }
-        }
-        reader.readAsDataURL(e.target.files[0]);
-    
     
 
     function handleChange(event) {
@@ -51,6 +37,22 @@ const Meme = () => {
             }
         })
     }
+
+    function imageHandler(event) {
+        const reader = new FileReader();
+        reader.onload = () => { 
+            setMeme(prevState => {
+                return {
+                    ...prevState,
+                    userfile: reader.result
+                }
+            }
+            )
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+
+    
 
     return (
         <main>
@@ -88,20 +90,22 @@ const Meme = () => {
                 <button onClick={Say} className="form--button">
                     Find A meme Image
                 </button>
+
                     <input 
                         type="file"
                         name="userfile"
                         accept="image/*"
-
+                        onChange={imageHandler}
                     />
                 
                 
 
 
                 <div className="meme">
-                    <img src={meme.randomImage} alt="meme" className="meme--image"/>
-                    <h2 className="meme--text top">{meme.topText}</h2>
-                    <h2 className="meme--text bottom">{meme.bottomText}</h2>
+                    
+                <img src={meme.randomImage} alt="meme" className="meme--image" />
+                <h2 className="meme--text top">{meme.topText}</h2>
+                <h2 className="meme--text bottom">{meme.bottomText}</h2>
                 </div>
 
            </div>    
