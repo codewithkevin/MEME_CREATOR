@@ -10,7 +10,7 @@ const Meme = () => {
         randomImage: image
     });
 
-    const [allMemeImages, setAllMemeImages] = React.useState(datas);    
+    const [allMemeImages] = React.useState(datas);    
     
     
     function Say() {
