@@ -26,7 +26,7 @@ const Meme = () => {
     }
 
     return (
-        <main className="Meme">
+        <main className="meme">
 
            <div className="form">
 
