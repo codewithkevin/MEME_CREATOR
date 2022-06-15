@@ -28,19 +28,31 @@ const Meme = () => {
     return (
         <main className="Meme">
 
-            <from className="form">
-                <input type="text" placeholder="Top text" className="form--input"/>
-                <input  type="text" placeholder="Bottom text" className="form--input"/>
-                
+           <div className="form">
+
+               <input 
+               type="text"
+                placeholder="Top Text"
+                className="form--input"
+                />
+
+                <input
+                type="text"
+                placeholder="Bottom Text"
+                className="form--input"
+                />
+
+    
                 <button onClick={Say} className="form--button">
                     Find A meme Image
                 </button>
-            
-            </from>
+
 
             <div className="meme-image">
                 <img src={meme.randomImage} alt="meme" className="meme--image"/>
             </div>
+
+           </div>    
 
         </main>
     )
