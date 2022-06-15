@@ -27,6 +27,12 @@ const Meme = () => {
 
     function handleChange(event) {
         const { name, value } = event.target;
+        setMeme(prevState => {
+            return {
+                ...prevState,
+                [name]: value
+            }
+        })
     }
 
     return (
@@ -58,6 +64,7 @@ const Meme = () => {
                 className="form--input"
                 name="bottomText"
                 value={meme.bottomText}
+                onChange={handleChange}
                 />
 
                 <button onClick={Say} className="form--button">
@@ -67,7 +74,7 @@ const Meme = () => {
 
                 <div className="meme">
                     <img src={meme.randomImage} alt="meme" className="meme--image"/>
-                    <h2 className="meme--text top">One does not simply</h2>
+                    <h2 className="meme--text top">{meme.topText}</h2>
                     <h2 className="meme--text bottom">One does not simply</h2>
                 </div>
 
