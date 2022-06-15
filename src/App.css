@@ -106,7 +106,8 @@ main {
     grid-template: 40px 40px / 1fr;
   }
   .form--button {
-    width: 100%;
+    width: fit-content;
     height: 40px;
+    
   }
 }
