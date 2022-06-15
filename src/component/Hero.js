@@ -76,7 +76,6 @@ const Meme = () => {
                 // }
                 onChange = {handleChange}
                 />
-
                 <input
                     type="text"
                     placeholder="Bottom Text"
@@ -86,21 +85,25 @@ const Meme = () => {
                     onChange={handleChange}
                 />
 
-                
-                <button onClick={Say} className="form--button">
-                    Find A meme Image
-                </button>
+                <div className="form--area">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <button onClick={Say} className="form--button">
+                                Find A meme Image
+                            </button>
+                        </div>
 
-                
-                <input 
-                    type="file"
-                    name="randomImage"
-                    accept="image/*"
-                    onChange={imageHandler}
-                    className="form--upload"
-                />
-                
-                
+                        <div className="col-md-6">
+                            <input 
+                                type="file"
+                                name="randomImage"
+                                accept="image/*"
+                                onChange={imageHandler}
+                                className="form--upload"
+                            />
+                        </div>    
+                    </div>
+                </div>    
 
 
                 <div className="meme">
@@ -108,7 +111,7 @@ const Meme = () => {
                     <img src={meme.randomImage} alt="meme" className="meme--image" />
                     <h2 className="meme--text top">{meme.topText}</h2>
                     <h2 className="meme--text bottom">{meme.bottomText}</h2>
-                    
+
                 </div>
 
            </div>    
