@@ -67,9 +67,15 @@ const Meme = () => {
                 onChange={handleChange}
                 />
 
-                <button onClick={Say} className="form--button">
-                    Find A meme Image
-                </button>
+                <div className="button-area">
+                    <button onClick={Say} className="form--button">
+                        Find A meme Image
+                    </button>
+                    <button onClick={Say} className="form--button">
+                        Find A meme Image
+                    </button>
+                </div>
+                
 
 
                 <div className="meme">
