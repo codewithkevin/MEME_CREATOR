@@ -8,7 +8,7 @@ const Meme = () => {
         topText: "",
         bottomText: "",
         randomImage: image,
-        userfile: image,
+        // userfile: image,
     });
 
     const [allMemeImages] = React.useState(datas);    
@@ -44,7 +44,7 @@ const Meme = () => {
             setMeme(prevState => {
                 return {
                     ...prevState,
-                    userfile: reader.result
+                    randomImage: reader.result
                 }
             }
             )
@@ -93,7 +93,7 @@ const Meme = () => {
 
                     <input 
                         type="file"
-                        name="userfile"
+                        name="randomImage"
                         accept="image/*"
                         onChange={imageHandler}
                     />
