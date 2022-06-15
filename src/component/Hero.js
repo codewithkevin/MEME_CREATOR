@@ -7,7 +7,8 @@ const Meme = () => {
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
-        randomImage: image
+        randomImage: image,
+        userupload: image,
     });
 
     const [allMemeImages] = React.useState(datas);    
@@ -24,6 +25,16 @@ const Meme = () => {
             }
         })
     }
+    function Uploadimage(){
+        
+        setMeme(prevSate => {
+            return {
+                ...prevSate,
+                file: meme.userupload
+            }
+        }
+        )
+    }
 
     function handleChange(event) {
         const { name, value } = event.target;
@@ -34,6 +45,8 @@ const Meme = () => {
             }
         })
     }
+    
+    // const choosenImage = Say ? meme.randomImage : meme.file;
 
     return (
         <main>
@@ -59,27 +72,31 @@ const Meme = () => {
                 />
 
                 <input
-                type="text"
-                placeholder="Bottom Text"
-                className="form--input"
-                name="bottomText"
-                value={meme.bottomText}
-                onChange={handleChange}
+                    type="text"
+                    placeholder="Bottom Text"
+                    className="form--input"
+                    name="bottomText"
+                    value={meme.bottomText}
+                    onChange={handleChange}
                 />
 
-                <div className="button-area">
-                    <button onClick={Say} className="form--button">
-                        Find A meme Image
-                    </button>
-                    <button onClick={Say} className="form--button">
-                        Find A meme Image
-                    </button>
-                </div>
+                
+                <button onClick={Say} className="form--button">
+                    Find A meme Image
+                </button>
+                    <input 
+                        type="file"
+                        name="userupload"
+                        onChange={Uploadimage}
+                        value={meme.userupload}
+                        placeholder="Upload your own image"
+                    />
+                
                 
 
 
                 <div className="meme">
-                    <img src={meme.randomImage} alt="meme" className="meme--image"/>
+                    <img src={meme.userupload} alt="meme" className="meme--image"/>
                     <h2 className="meme--text top">{meme.topText}</h2>
                     <h2 className="meme--text bottom">{meme.bottomText}</h2>
                 </div>
