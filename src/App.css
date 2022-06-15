@@ -111,5 +111,8 @@ main {
     justify-self: center;
   }
 
+  .form--upload {
+    justify-self: center;
+  }
   
 }

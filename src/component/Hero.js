@@ -91,21 +91,24 @@ const Meme = () => {
                     Find A meme Image
                 </button>
 
-                    <input 
-                        type="file"
-                        name="randomImage"
-                        accept="image/*"
-                        onChange={imageHandler}
-                    />
+                
+                <input 
+                    type="file"
+                    name="randomImage"
+                    accept="image/*"
+                    onChange={imageHandler}
+                    className="form--upload"
+                />
                 
                 
 
 
                 <div className="meme">
                     
-                <img src={meme.randomImage} alt="meme" className="meme--image" />
-                <h2 className="meme--text top">{meme.topText}</h2>
-                <h2 className="meme--text bottom">{meme.bottomText}</h2>
+                    <img src={meme.randomImage} alt="meme" className="meme--image" />
+                    <h2 className="meme--text top">{meme.topText}</h2>
+                    <h2 className="meme--text bottom">{meme.bottomText}</h2>
+                    
                 </div>
 
            </div>    

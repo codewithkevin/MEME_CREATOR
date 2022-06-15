@@ -1,6 +1,8 @@
 import './App.css';
 import Header from './component/Header'
 import Meme from './component/Hero'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
