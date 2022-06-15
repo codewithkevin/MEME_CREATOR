@@ -8,7 +8,7 @@ const Meme = () => {
         topText: "",
         bottomText: "",
         randomImage: image,
-        userupload: image,
+        userfile: image,
     });
 
     const [allMemeImages] = React.useState(datas);    
@@ -25,16 +25,22 @@ const Meme = () => {
             }
         })
     }
-    function Uploadimage(){
-        
-        setMeme(prevSate => {
-            return {
-                ...prevSate,
-                file: meme.userupload
+
+    imageHandler = (e) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+            if(reader.readyState === 2) {
+                setMeme(prevState => {
+                    return {
+                        ...prevState,
+                        userfile: reader.result
+                    }
+                })
             }
         }
-        )
-    }
+        reader.readAsDataURL(e.target.files[0]);
+    
+    
 
     function handleChange(event) {
         const { name, value } = event.target;
@@ -45,8 +51,6 @@ const Meme = () => {
             }
         })
     }
-    
-    // const choosenImage = Say ? meme.randomImage : meme.file;
 
     return (
         <main>
@@ -86,17 +90,16 @@ const Meme = () => {
                 </button>
                     <input 
                         type="file"
-                        name="userupload"
-                        onChange={Uploadimage}
-                        value={meme.userupload}
-                        placeholder="Upload your own image"
+                        name="userfile"
+                        accept="image/*"
+
                     />
                 
                 
 
 
                 <div className="meme">
-                    <img src={meme.userupload} alt="meme" className="meme--image"/>
+                    <img src={meme.randomImage} alt="meme" className="meme--image"/>
                     <h2 className="meme--text top">{meme.topText}</h2>
                     <h2 className="meme--text bottom">{meme.bottomText}</h2>
                 </div>
