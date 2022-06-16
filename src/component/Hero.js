@@ -8,7 +8,6 @@ const Meme = () => {
         topText: "",
         bottomText: "",
         randomImage: image,
-        // userfile: image,
     });
 
     const [allMemeImages] = React.useState(datas);    
