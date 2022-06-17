@@ -11,18 +11,26 @@ const Meme = () => {
 
     const [allMemeImages, setAllMemeImages] = React.useState([]);    
     
-    React.useEffect(() => {
-        // fetch("https://api.imgflip.com/get_memes")
-        // .then(response => response.json())
-        // .then(data => { setAllMemeImages(data.data.memes) })
+    // React.useEffect(() => {
+    //     // fetch("https://api.imgflip.com/get_memes")
+    //     // .then(response => response.json())
+    //     // .then(data => { setAllMemeImages(data.data.memes) })
 
-        async function fetchData() {
-            const res = await fetch("https://api.imgflip.com/get_mem")
+    //     async function fetchData() {
+    //         const res = await fetch("https://api.imgflip.com/get_mem")
+    //         const data = await res.json()
+    //         setAllMemeImages(data.data.memes)
+    //     }
+    //     fetchData()
+    // }, []);
+    React.useEffect(() => {
+        async function getMemes() {
+            const res = await fetch("https://api.imgflip.com/get_memes")
             const data = await res.json()
             setAllMemeImages(data.data.memes)
         }
-        fetchData()
-    }, []);
+        getMemes()
+    }, [])
     
     function Say() {
         const randomNumber = Math.floor(Math.random() * allMemeImages.length)
