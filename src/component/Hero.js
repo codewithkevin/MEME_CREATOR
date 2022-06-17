@@ -1,6 +1,5 @@
 import React from 'react';
 import image from './images/japan.jpg';
-import datas from '../memesData'
 
 const Meme = () => {
 
@@ -10,8 +9,13 @@ const Meme = () => {
         randomImage: image,
     });
 
-    const [allMemeImages] = React.useState(datas);    
+    const [allMemeImages, setAllMemeImages] = React.useState([]);    
     
+    React.useEffect(() => {
+        fetch('"https://api.imgflip.com/get_memes"')
+        .then(response => response.json())
+        .then(data => { setAllMemeImages(data.data.memes) })
+    })
     
     function Say() {
         const memesArray = allMemeImages.data.memes;
