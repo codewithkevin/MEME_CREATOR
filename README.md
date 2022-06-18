@@ -12,9 +12,9 @@ During this project, I covered some Amazing topics in react :
 </ul>
 
 # VIEW 
-<img src="src/component/images/snap1.png" alt="">
-<img src="src/component/images/snap2.png" alt="">
-<img src="src/component/images/snap3.png" alt="">
+<img src="src/component/images/snap1.jpg" alt="">
+<img src="src/component/images/snap2.jpg" alt="">
+<img src="src/component/images/snap3.jpg" alt="">
 
 
 
