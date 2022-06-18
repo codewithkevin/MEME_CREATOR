@@ -1,3 +1,29 @@
+# MEME CREATOR 
+This project helps you to create memes of your own choice. 
+
+# TOPICS COVERED 
+During this project, I covered some Amazing topics in react :
+<ul>
+    <li>Event Listeners</li>
+    <li>State</li>
+    <li>Conditional rendering</li>
+    <li>Side Effects</li>
+    <li>Forms</li>
+</ul>
+
+# VIEW 
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
